@@ -1,6 +1,29 @@
+# Debugging Notes
+## Example of vscode launch.json
+```
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387 "/home/cathy/miniconda3/envs/py38/bin/python"
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "train/tasks/semantic/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "python": "/home/cathy/miniconda3/envs/py38/bin/python",
+            "args": "-d /home/cathy/Projects/data1 -dc ./train/tasks/semantic/config/labels/carla.yaml -ac ./salsanext_carla.yml -l ./log"
+        }
+    ]
+}
+```
+
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/salsanext-fast-semantic-segmentation-of-lidar/3d-semantic-segmentation-on-semantickitti)](https://paperswithcode.com/sota/3d-semantic-segmentation-on-semantickitti?p=salsanext-fast-semantic-segmentation-of-lidar) [![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg)](https://arxiv.org/abs/2003.03653)
 
-# SalsaNext: Fast, Uncertainty-aware Semantic Segmentation of LiDAR Point Clouds for Autonomous Driving
+# Citing SalsaNext: Fast, Uncertainty-aware Semantic Segmentation of LiDAR Point Clouds for Autonomous Driving
 
 ## Abstract 
 
