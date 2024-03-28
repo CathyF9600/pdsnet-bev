@@ -1,0 +1,131 @@
+# This file is covered by the LICENSE file in the root of this project.
+name: "carla"
+labels:
+  0: "None"
+  1: "Building"
+  2: "Fences"
+  3: "Other"
+  4: "Pedestrian"
+  5: "Pole"
+  6: "RoadLines"
+  7: "Road"
+  8: "Sidewalk"
+  9: "Vegetation"
+  10: "Vehicle"
+  11: "Wall"
+  12: "TrafficSign"
+  13: "Sky"
+  14: "Ground"
+  15: "Bridge"
+  16: "RailTrack"
+  17: "GuardRail"
+  18: "TrafficLight"
+  19: "Static"
+  20: "Dynamic"
+  21: "Water"
+  22: "Terrain"
+color_map: # bgr
+  0: [255, 255, 255]  # None
+  1: [70, 70, 70]     # Building
+  2: [40, 40, 100]    # Fences
+  3: [80, 90, 55]     # Other
+  4: [60, 20, 220]    # Pedestrian
+  5: [153, 153, 153]  # Pole
+  6: [50, 234, 157]   # RoadLines
+  7: [128, 64, 128]   # Road
+  8: [232, 35, 244]   # Sidewalk
+  9: [35, 142, 107]   # Vegetation
+  10: [142, 0, 0]     # Vehicle
+  11: [156, 102, 102] # Wall
+  12: [0, 220, 220]   # TrafficSign
+  13: [180, 130, 70]  # Sky
+  14: [81, 0, 81]     # Ground
+  15: [100, 100, 150] # Bridge
+  16: [140, 150, 230] # RailTrack
+  17: [180, 165, 180] # GuardRail
+  18: [30, 170, 250]  # TrafficLight
+  19: [160, 190, 110] # Static
+  20: [50, 120, 170]  # Dynamic
+  21: [150, 60, 45]   # Water
+  22: [100, 170, 145] # Terrain
+content: # as a ratio with the total number of points
+  0: 0.04568678448198591
+  1: 0.1029833450322658
+  2: 0.022351358614092345
+  3: 0.00037261959395085164
+  4: 0.0017797585860340314
+  5: 0.007310256167347759
+  6: 0.003674332227962368
+  7: 0.18211943447790716
+  8: 0.08976226498800362
+  9: 0.05911279221177351
+  10: 0.38702543423279534
+  11: 0.04448593920821689
+  12: 0.00020555378388691927
+  13: 0.0
+  14: 0.005577022381377184
+  15: 0.0036238231655983948
+  16: 6.892773779893094e-05
+  17: 0.013741424700709616
+  18: 0.00021943040029928868
+  19: 0.0076833424891681
+  20: 0.0015843475956035691
+  21: 7.731745584316086e-05
+  22: 0.02055449046737924
+# classes that are indistinguishable from single scan or inconsistent in
+# ground truth are mapped to their closest equivalent
+learning_map:
+  0: 0   #"None"
+  1: 1   #"Building"
+  2: 2   #"Fences"
+  3: 3   #"Other"
+  4: 4   #"Pedestrian"
+  5: 5   #"Pole"
+  6: 6   #"RoadLines"
+  7: 6   #"Road"
+  8: 7   #"Sidewalk"
+  9: 8   #"Vegetation"
+  10: 9 #"Vehicle"
+  11: 2 #"Wall"
+  12: 5 #"TrafficSign"
+  13: 3 #"Sky"
+  14: 10 #"Ground"
+  15: 3 #"Bridge"
+  16: 3 #"RailTrack"
+  17: 2 #"GuardRail"
+  18: 5 #"TrafficLight"
+  19: 3 #"Static"
+  20: 3 #"Dynamic"
+  21: 3 #"Water"
+  22: 10 #"Terrain"
+learning_map_inv: # inverse of previous map
+  0: 0   #"None"
+  1: 1   #"Building"
+  2: 2   #"Fence"
+  3: 3   #"Other"
+  4: 4   #"Pedestrian"
+  5: 5   #"Pole"
+  6: 7   #"Road"
+  7: 8   #"Sidewalk"
+  8: 9   #"Vegetation"
+  9: 10   #"Vehicle"
+  10: 14 #"Ground"
+learning_ignore: # Ignore classes
+  0: True   #"None"
+  1: False   #"Building"
+  2: False   #"Fence"
+  3: False   #"Other"
+  4: False   #"Pedestrian"
+  5: False   #"Pole"
+  6: False   #"Road"
+  7: False   #"Sidewalk"
+  8: False   #"Vegetation"
+  9: False   #"Vehicle"
+  10: False #"Ground"
+split: # sequence numbers
+  train:
+    - 'train'
+  valid:
+    - 'valid'
+  test:
+    - 'test'
